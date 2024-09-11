@@ -1,13 +1,13 @@
 package org.example.myClasses;
 
-import java.time.LocalDateTime;
+import java.util.*;
 
 public class Person {
     private String name; //Поле не может быть null, Строка не может быть пустой
-    private java.time.LocalDateTime birthday; //Поле не может быть null
+    private java.util.Date birthday; //Поле не может быть null
     private Location location ; //Поле может быть null
 
-    public Person(String name, LocalDateTime birthday, Location location) {
+    public Person(String name, java.util.Date birthday, Location location) {
         this.name = name;
         this.birthday = birthday;
         this.location = location;
@@ -17,11 +17,20 @@ public class Person {
         this.name = name;
     }
 
-    public void setBirthday(LocalDateTime birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
     public void setLocation(){
         this.location = location;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", birthday=" + birthday +
+                ", location=" + location +
+                '}';
     }
 }

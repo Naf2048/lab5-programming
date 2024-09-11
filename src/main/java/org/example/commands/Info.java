@@ -18,6 +18,6 @@ public class Info implements Command {
 
     @Override
     public void getDescription(){
-        System.out.println("Выводит информацию о коллекции в командную строку");
+        System.out.println("Выводит информацию о коллекции в командную строку.");
     }
 }

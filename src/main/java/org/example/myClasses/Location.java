@@ -23,11 +23,28 @@ public class Location {
     }
 
     public void setLocationZ(int z){
-        this.y = y;
+        this.z = z;
+    }
+
+    public int getLocationX(){
+        return this.x;
+    }
+
+    public long getLocationY(){
+        return this.y;
+    }
+
+    public int getLocationZ(){
+        return this.z;
     }
 
     public void setLocationName(String name){
         this.name = name;
+    }
+
+    @Override
+    public String toString(){
+        return "Location name: " + this.name + ", x: " + this.x + ", y: " + this.y + ", z: " + this.z;
     }
 
 }

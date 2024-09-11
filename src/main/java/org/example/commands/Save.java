@@ -3,10 +3,17 @@ package org.example.commands;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class save implements Command{
+/** класс для инкапсулирования комманды save
+ * @author Daniel
+ */
+public class Save implements Command{
     private final Storage storage;
     private final File file;
 
+    public Save(Storage storage, File file) {
+        this.storage = storage;
+        this.file = file;
+    }
 
     @Override
     public void execute() {
@@ -19,6 +26,6 @@ public class save implements Command{
 
     @Override
     public void getDescription() {
-
+        System.out.println("Сохранение коллекции в файл.");
     }
 }

@@ -18,6 +18,6 @@ public class Help implements Command{
 
     @Override
     public void getDescription(){
-        System.out.println("Выводит то, что делают каналы");
+        System.out.println("Выводит то, что делают каналы.");
     }
 }
